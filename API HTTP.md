@@ -41,6 +41,7 @@
         "duracion": "number", // Duración total en segundos
         "fechaEstreno": "number", // Timestamp
         "nombreDirector": "string",
+        "idTarifa": "number",
         "precio": "number", // Precio total en centimos
         "versionIdioma": "string", // "V.E." (versión española) o "V.O.S.E." (versión original subtitulada al español)
         "idActores": [ "number", ... ], // Array de ids de actores
@@ -93,6 +94,17 @@
     `Lo mismo que GET /api/ususario/{id} devolvería con la id del usuario logueado`
   - Output en caso de error:
     `Mensaje de error`
+### Ver carrito
+- POST /api/carrito/todo
+  - Input:
+    ```js
+    {
+        "email": "string",
+        "contrasenya": "string"
+    }
+    ```
+  - Output:
+    `Array de películas`
 ### Añadir al carrito
 - POST /api/carrito/
   - Input:
