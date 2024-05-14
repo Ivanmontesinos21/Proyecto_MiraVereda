@@ -1,6 +1,6 @@
 ﻿PASO A TABLAS DE MIRAVEREDA
 
-Leyenda:
+Lyenda:
 C.P→ Clave primaria
 C.Aj → Clave Ajena
 V.N.N → Valor no nulo
@@ -8,12 +8,19 @@ C.Alt → Clave Alternativa
 
 
 Cliente: (nombre, apellidos, contraseña, num_tarjeta,
-domicilio, email, código_postal, fecha_nacimiento y id_contenVisual)
+domicilio, email, código_postal, fecha_nacimiento y id_contenVisua)
 C.P: id_cliente
 C.Aj:id_contenVisua → Contenido Visual(id)
 V.N.N:nombre,apellidos, contraseña, email, fecha_nacimiento y
 fecha_nacimiento
 C.Alt: email
+
+
+Tarjeta:(fecha_caducidad,CCV,id_Cliente)
+C.P:num_tarjeta y titular
+C.Aj:id_Cliente → Cliente(id_cliente)
+V.N.N: fecha_caducidad y CCV
+
 
 
 Aclaración: valoración→ Valoración de cada usuario
