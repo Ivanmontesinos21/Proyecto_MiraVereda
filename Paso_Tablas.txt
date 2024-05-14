@@ -46,10 +46,10 @@ V.N.N: num_Factura y id_contenVisual
 
 Aclaración: valoración_media→ Valoración de todos los usuarios
 Contenido Audiovisual: ( género, fecha_estreno,duración, titulo,
-precio_Tarifa , descripción, valoración_media, nombre_director,version_idioma )
+precio , descripción, valoración_media, nombre_director,version_idioma )
 C.P: id y id_Tarifa
 C.Aj: id_Tarifa → Tarifa(id) 
-V.N.N:género,titulo,duracion,nombre_director,precio_Tarifa,version_idioma y
+V.N.N:género,titulo,duracion,nombre_director,precio,version_idioma y
 id_Tarifa
 
 
