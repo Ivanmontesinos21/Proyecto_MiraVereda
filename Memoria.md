@@ -1,0 +1,7 @@
+- 13/05/2024
+  - Todos hemos trabajado en el modelo de Entidad-Relación.
+  - Ian y Jaime han dedicado las últimas dos horas a organizar el tablero Kanban.
+- 14/05/2024
+  - Ian ha hecho el paso a tablas y ha empezado la normalización.
+  - Jaime ha hecho la especificación de la API HTTP y la base del backend.
+  - Ivan y David han hecho pantallas del frontend Android.
