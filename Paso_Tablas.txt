@@ -7,7 +7,7 @@ V.N.N → Valor no nulo
 C.Alt → Clave Alternativa
 
 
-Cliente: (nombre, apellidos, contraseña, num_tarjeta,
+Cliente: (nombre, apellidos, contraseña,
 domicilio, email, código_postal, fecha_nacimiento y id_contenVisua)
 C.P: id_cliente
 C.Aj:id_contenVisua → Contenido Visual(id)
@@ -16,8 +16,8 @@ fecha_nacimiento
 C.Alt: email
 
 
-Tarjeta:(fecha_caducidad,CCV,id_Cliente)
-C.P:num_tarjeta y titular
+Tarjeta:(fecha_caducidad,CCV,id_Cliente,titular)
+C.P:num_tarjeta
 C.Aj:id_Cliente → Cliente(id_cliente)
 V.N.N: fecha_caducidad y CCV
 
