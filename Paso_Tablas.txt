@@ -15,6 +15,10 @@ V.N.N:nombre,apellidos, contraseña, email, fecha_nacimiento y
 fecha_nacimiento
 C.Alt: email
 
+Pertenece_Tarjeta:()
+C.P: id_Cliente y num_Tarjeta
+C.Aj: id_Cliente → Cliente( id_cliente) y num_Tarjeta → Tarjeta(num_tarjeta)
+
 
 Tarjeta:(fecha_caducidad,CCV,id_Cliente,titular)
 C.P:num_tarjeta
