@@ -8,9 +8,9 @@ C.Alt → Clave Alternativa
 
 
 Cliente: (nombre, apellidos, contraseña,
-domicilio, email, código_postal, fecha_nacimiento y id_contenVisua)
+domicilio, email, código_postal, fecha_nacimiento y id_conteAudiovi)
 C.P: id_cliente
-C.Aj:id_contenVisua → Contenido Visual(id)
+C.Aj:id_ conteAudiovi → Contenido Visual(id)
 V.N.N:nombre,apellidos, contraseña, email, fecha_nacimiento y
 fecha_nacimiento
 C.Alt: email
@@ -29,8 +29,8 @@ V.N.N: fecha_caducidad y CCV
 
 Aclaración: valoración→ Valoración de cada usuario
 Alquila:(cobrado,facturado,valoración)
-C.P: id_Cliente y id_contenVisual
-C.Aj:id_Cliente → Cliente(id_cliente) y id_contentVisual→ id(Contenido
+C.P: id_Cliente y id_ conteAudiovi
+C.Aj:id_Cliente → Cliente(id_cliente) y id_conteAudiovi→ id(Contenido
 Visual)
 V.N.N: cobrado y facturado
 
@@ -41,11 +41,11 @@ C.Aj: id_Cliente → Cliente(id_cliente)
 V.N.N:id_Cliente
 
 
-Línea de Factura: (num_Factura y id_contenVisual) 
+Línea de Factura: (num_Factura y id_conteAudiovi) 
 C.P:num_linea
-C.Aj:num_Factura → Factura(numero_factura) y id_contentVisua→ id(Contenido
+C.Aj:num_Factura → Factura(numero_factura) y id_conteAudiovi→ id(Contenido
 Visual)
-V.N.N: num_Factura y id_contenVisual
+V.N.N: num_Factura y id_ conteAudiovi
 
 
 Aclaración: valoración_media→ Valoración de todos los usuarios
@@ -70,7 +70,7 @@ V.N.N:nombre y apellidos
 
 Actuación_ContenAudiovi:()
 C.P:dni y id
-C.Aj: id_contenido → Contenido Audiovisual(id) y dni_actor → Actor(dni)
+C.Aj: id_ conteAudiovi → Contenido Audiovisual(id) y dni_actor → Actor(dni)
 
 
 Las entidades  Película, Capítulos y Corto heredan de la super clase 
@@ -78,24 +78,24 @@ Contenido Audiovisual todos los atributos.
 
 Película: (disponible_hasta) 
 C.P: id
-C.Aj: id_conteAudio → Contenido Audiovisual( id)
+C.Aj: id_ conteAudiovi → Contenido Audiovisual( id)
 V.N.N: disponible_hasta
 
 
 Capítulo: (disponible_desde,titulo_Serie,temporada)
 C.P: id
-C.Aj: id_conteAudio → Contenido Audiovisual( id) y
+C.Aj: id_conteAudiovi → Contenido Audiovisual( id) y
  titulo_Serie → Serie ( título)
 V.N.N: temporada, titulo_Serie y disponible_desde
 
 
 Serie: ()
 C.P: id y  título
-C.Aj: id_conteAudio → Contenido Audiovisual( id)
+C.Aj: id_ conteAudiovi → Contenido Audiovisual( id)
 
 
 Corto: () 
 C.P: id
-C.Aj: id_conteAudio → Contenido Audiovisual( id)
+C.Aj: id_ conteAudiovi → Contenido Audiovisual( id)
 
 
