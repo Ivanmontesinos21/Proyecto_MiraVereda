@@ -10,18 +10,13 @@ C.Alt → Clave Alternativa
 Cliente: (nombre, apellidos, contraseña,
 domicilio, email, código_postal, fecha_nacimiento y id_conteAudiovi)
 C.P: id_cliente
-C.Aj:id_ conteAudiovi → Contenido Visual(id)
 V.N.N:nombre,apellidos, contraseña, email, fecha_nacimiento y
 fecha_nacimiento
 C.Alt: email
 
-Pertenece_Tarjeta:()
-C.P: id_Cliente y num_Tarjeta
-C.Aj: id_Cliente → Cliente( id_cliente) y num_Tarjeta → Tarjeta(num_tarjeta)
 
-
-Tarjeta:(fecha_caducidad,CCV,id_Cliente,titular)
-C.P:num_tarjeta
+Tarjeta:(fecha_caducidad,CCV,id_Cliente,titular,num_tarjeta)
+C.P:id_tarjeta
 C.Aj:id_Cliente → Cliente(id_cliente)
 V.N.N: fecha_caducidad, CCV y titular
 
