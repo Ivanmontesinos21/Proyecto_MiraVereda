@@ -5,3 +5,9 @@
   - Ian ha hecho el paso a tablas y ha empezado la normalización.
   - Jaime ha hecho la especificación de la API HTTP y la base del backend.
   - Ivan y David han hecho pantallas del frontend Android.
+  - 15/05/2024
+  - Jaime ha hecho el CRUD de peliculas 
+  - David ha hecho el CRUD de usuarios.
+  - Ian ha estado revisando el ddl porque habia que añadir algo al ddl hecho por David
+  - Ivan ha modificado el ddl hecho por David y pasarlo a Oracle.
+    
