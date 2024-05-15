@@ -1,5 +1,7 @@
 PASO A TABLAS DE MIRAVEREDA
 
+Los ? son flechas
+
 Lyenda:
 C.P? Clave primaria
 C.Aj ? Clave Ajena
