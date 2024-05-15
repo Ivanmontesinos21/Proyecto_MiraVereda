@@ -30,7 +30,7 @@ foreign key (id_tarifa_fk) references Tarifa(id)
 
 Create table Actuacion_ContenAudiovi(
 dni_actor varchar(9),
-id_conteAudiovi int auto_increment,
+id_conteAudiovi int,
 foreign key(dni_actor) references Actor(dni),
 foreign key(id_conteAudiovi) references Contenido_AudioVisual(id),
 primary key(dni_actor,id_conteAudiovi)
@@ -56,7 +56,7 @@ primary key(idcliente)
 );
 
 Create table Alquila(
-id_conteAudiovi int auto_increment,
+id_conteAudiovi int,
 id_cliente varchar(30),
 foreign key(id_conteAudiovi) references Contenido_AudioVisual(id),
 foreign key(id_cliente) references Cliente(id_cliente),
@@ -87,7 +87,7 @@ foreign key(id_contenidoAudioVisual) references Contenido_AudioVisual(id)
 
 Create table Pelicula(
 disponible_hasta date not null,
-id_contenidoAudiovisual int auto_increment,
+id_contenidoAudiovisual int,
 genero varchar(30),
 fecha_estreno DATE,
 duracion integer,
@@ -104,7 +104,7 @@ primary key(id_contenidoAudiovisual)
 );
 
 Create table Corto(
-id_contenidoAudiovisual int auto_increment,
+id_contenidoAudiovisual int,
 genero varchar(30),
 fecha_estreno DATE,
 duracion integer,
@@ -152,9 +152,9 @@ primary key(id_contenidoAudiovisual)
 create table Tarjeta(
 num_tarjeta varchar(9) primary key,
 fecha_caducidad date not null,
-CVV varchar(3),
-titular varchar(20),
-id_cliente varchar(30),
+CVV varchar(3) not null,
+titular varchar(20) not null,
+id_cliente varchar(30) not null,
 foreign key (id_cliente) references Cliente(id_cliente)
 );
 
