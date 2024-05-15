@@ -13,7 +13,8 @@
         "nombreDirector": "string",
         "valoracionMedia": "number", // Número entre 1 y 5
         "idTarifa": "number",
-        "precio": "number", // Precio total en centimos
+        "precio": "number", // Precio en centimos
+        "precioConTarifa": "number", // Precio en centimos con tarifa aplicada
         "versionIdioma": "string", // "V.E." (versión española) o "V.O.S.E." (versión original subtitulada al español)
         "actores": [
             {
@@ -25,6 +26,7 @@
         ],
         "disponibleHasta": "number", // Timestamp, solo disponible en peliculas
         "disponibleDesde": "number", // Timestamp, solo disponible en capitulos
+        "idSerie": "number", // ID de la serie, solo disponible en capitulos
         "serie": "string", // Nombre de la serie, solo disponible en capitulos
         "temporada": "number", // Solo disponible en capitulos
     }
@@ -42,15 +44,18 @@
         "fechaEstreno": "number", // Timestamp
         "nombreDirector": "string",
         "idTarifa": "number",
-        "precio": "number", // Precio total en centimos
+        "precio": "number", // Precio en centimos sin tarifa aplicada
         "versionIdioma": "string", // "V.E." (versión española) o "V.O.S.E." (versión original subtitulada al español)
         "idActores": [ "number", ... ], // Array de ids de actores
         "disponibleHasta": "number", // Timestamp, solo disponible en peliculas
         "disponibleDesde": "number", // Timestamp, solo disponible en capitulos
-        "serie": "string", // Nombre de la serie, solo disponible en capitulos
+        "idSerie": "number", // ID de la serie, solo disponible en capitulos
         "temporada": "number", // Solo disponible en capitulos
     }
     ```
+- GET /api/pelicula/?genero={genero}
+  - Output:
+    `Array de películas que pertenecen al género especificado`
 ## CRUD Usuarios
 - GET y DELETE /api/usuario/{id}
   - Output:
@@ -63,6 +68,16 @@
         "fechaNacimiento": "number", // Timestamp
         "domicilio": "string",
         "codigoPostal": "number",
+        "tarjetas": [
+            {
+                "id": "number",
+                "num_tarjeta": "string",
+                "ccv": "string",
+                "fechaCaducidad": "number", // Timestamp
+                "titular": "string" // Nombre del titular
+            },
+            ...
+        ]
     }
     ```
 - POST y PUT /api/usuario/
@@ -75,7 +90,6 @@
         "email": "string",
         "fechaNacimiento": "number", // Timestamp
         "contrasenya": "string",
-        "numTarjeta": "number"
         "domicilio": "string",
         "codigoPostal": "number",
     }
@@ -117,6 +131,19 @@
     ```
   - Output:
     `Total de la factura`
+### Añadir tarjeta
+- POST /api/tarjeta/
+  - Input:
+    ```js
+    {
+        "email": "string",
+        "contrasenya": "string",
+        "num_tarjeta": "string",
+        "ccv": "string",
+        "fechaCaducidad": "number", // Timestamp
+        "titular": "string" // Nombre del titular
+    }
+    ```
 ### Votar una pelicula
 - POST /api/votar/
   - Input:
@@ -150,3 +177,13 @@
     ```
   - Output:
     `Total de la factura`
+### Quitar tarjeta
+- DELETE /api/tarjeta/
+  - Input:
+    ```js
+    {
+        "email": "string",
+        "contrasenya": "string",
+        "idTarjeta": "number"
+    }
+    ```
