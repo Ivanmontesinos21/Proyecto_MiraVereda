@@ -1,19 +1,9 @@
-NORMALIZACIÓN DE MIRAVEREDA
+ï»¿NORMALIZACIÃ“N DE MIRAVEREDA
 
 Primera forma normal (1FN)
 
 
-ATRIBUTO EMAIL QUITADO PARA CREAR TABLA
-Cliente: (nombre, apellidos, contraseña,domicilio,
- código_postal, fecha_nacimiento y id_conteAudiovi)
-C.P: id_cliente
-C.Aj:id_conteAudiovi ? Contenido Visual(id)
-
-
-TABLA AÑADIDA
-Lista_emails:(email) 
-C.P:id_cliente
-
+NADA HA SIDO MODIFICADO
 
 
 Segunda forma normal (2FN)
