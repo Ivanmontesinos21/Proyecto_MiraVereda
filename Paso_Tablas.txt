@@ -9,7 +9,7 @@ C.Alt ? Clave Alternativa
 
 Cliente: (nombre, apellidos, contraseña,
 domicilio, email, código_postal, fecha_nacimiento y id_conteAudiovi)
-C.P: id_cliente
+C.P: id_clienteid
 C.Aj:id_ conteAudiovi ? Contenido Visual(id)
 V.N.N:nombre,apellidos, contraseña, email y fecha_nacimiento
 C.Alt: email
