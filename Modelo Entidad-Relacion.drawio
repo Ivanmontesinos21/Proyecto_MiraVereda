@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-15T15:16:02.106Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0" etag="RRY-Bl3h7iYgbgPerznX" version="24.4.0" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-15T16:45:11.199Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0" etag="YA6-oVwLxphAC8Cc_pgh" version="24.4.0" type="device">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="2254" dy="1702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="3005" dy="1643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -404,11 +404,10 @@
         <mxCell id="5-l7kHvZdcasHjzHdQ5A-1" value="Tarjeta" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="-590" y="530" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="5-l7kHvZdcasHjzHdQ5A-2" value="num_tarjeta" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" parent="1" vertex="1">
-          <mxGeometry x="-730" y="560" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="5-l7kHvZdcasHjzHdQ5A-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="5-l7kHvZdcasHjzHdQ5A-2" target="5-l7kHvZdcasHjzHdQ5A-1" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="5-l7kHvZdcasHjzHdQ5A-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="FPb-ot3ljSfMNELSXPd0-2" target="5-l7kHvZdcasHjzHdQ5A-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-642" y="567" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="5-l7kHvZdcasHjzHdQ5A-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="MZahAP7ZjcBy5LVu-B12-157" target="5-l7kHvZdcasHjzHdQ5A-11" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -430,7 +429,7 @@
             <mxPoint x="-581.7800506347321" y="610.2721215233578" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5-l7kHvZdcasHjzHdQ5A-9" value="M" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="5-l7kHvZdcasHjzHdQ5A-9" value="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-480" y="270" width="30" height="20" as="geometry" />
         </mxCell>
         <mxCell id="5-l7kHvZdcasHjzHdQ5A-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="5-l7kHvZdcasHjzHdQ5A-11" target="5-l7kHvZdcasHjzHdQ5A-1" edge="1">
@@ -451,10 +450,10 @@
         <mxCell id="FWq8B1yGurNMjva8XPuA-1" value="titular" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="-640" y="610" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="nk6RAc3MeLSXYVhckob2-1" value="titulo" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="nk6RAc3MeLSXYVhckob2-1" value="titulo" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="280" y="690" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="nk6RAc3MeLSXYVhckob2-2" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="nk6RAc3MeLSXYVhckob2-1" target="ZYv0RMSDHckvNxvjCgx5-5">
+        <mxCell id="nk6RAc3MeLSXYVhckob2-2" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="nk6RAc3MeLSXYVhckob2-1" target="ZYv0RMSDHckvNxvjCgx5-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="560" as="sourcePoint" />
             <mxPoint x="450" y="510" as="targetPoint" />
@@ -462,6 +461,18 @@
               <mxPoint x="330" y="670" />
               <mxPoint x="401" y="670" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FPb-ot3ljSfMNELSXPd0-1" value="id_tarjeta" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="510" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FPb-ot3ljSfMNELSXPd0-2" value="num_tarjeta" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-750" y="560" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FPb-ot3ljSfMNELSXPd0-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="FPb-ot3ljSfMNELSXPd0-1" target="5-l7kHvZdcasHjzHdQ5A-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-740" y="550" as="sourcePoint" />
+            <mxPoint x="-688" y="533" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
