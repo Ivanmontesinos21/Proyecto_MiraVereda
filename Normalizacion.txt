@@ -1,89 +1,18 @@
-﻿NORMALIZACIÓN DE MIRAVEREDA
+NORMALIZACI�N DE MIRAVEREDA
 
 Primera forma normal (1FN)
 
-Cliente: (nombre, apellidos, contraseña,domicilio, email, código_postal, fecha_nacimiento y id_contenVisual)
+
+ATRIBUTO EMAIL QUITADO PARA CREAR TABLA
+Cliente: (nombre, apellidos, contrase�a,domicilio,
+ c�digo_postal, fecha_nacimiento y id_conteAudiovi)
 C.P: id_cliente
-C.Aj:id_contenVisual → Contenido Visual(id)
+C.Aj:id_conteAudiovi ? Contenido Visual(id)
 
 
-Pertenece_Tarjeta:()
-C.P: id_Cliente y num_Tarjeta
-C.Aj: id_Cliente → Cliente( id_cliente) y num_Tarjeta → Tarjeta(num_tarjeta)
-
-
-Tarjeta:(CCV,fecha_caducidad,titular y num_tarjeta)
-C.P: num_tarjeta
-C.Aj:id_Cliente → Cliente(id_cliente)
-
-
-Alquila:(cobrado,facturado,valoración)
-C.P: id_Cliente y id_contenVisual
-C.Aj:id_Cliente → Cliente(id_cliente) y id_contentVisual→ id(Contenido Visual)
-V.N.N: cobrado y facturado
-
-
-Factura: ( importe_base, importe_con_iva, fecha,id_Cliente) 
-C.P: numero_factura
-C.Aj: id_Cliente → Cliente(id_cliente)
-V.N.N:id_Cliente
-
-
-Línea de Factura: (num_Factura y id_contenVisual) 
-C.P:num_linea
-C.Aj:num_Factura → Factura(numero_factura) y id_contentVisua→ id(Contenido
-Visual)
-V.N.N: num_Factura y id_contenVisual
-
-Aclaración: valoración_media→ Valoración de todos los usuarios
-Contenido Audiovisual: ( género, fecha_estreno,duración, titulo,
-precio_Tarifa , descripción, valoración_media, nombre_director, version_idioma )
-C.P: id y id_Tarifa
-C.Aj: id_Tarifa → Tarifa(id) 
-V.N.N: género,titulo,duracion,nombre_director,precio,
-version_idioma y id_Tarifa
-
-
-Tarifa:(incremento)
-C.P:id
-V.N.N:incremento
-
-
-Actor:(nombre,apellidos)
-C.P:dni24 pt
-V.N.N:nombre y apellidos
-
-
-Actuación_ContenAudiovi:()
-C.P:dni y id
-C.Aj: id_contenido → Contenido Audiovisual(id) y dni_actor → Actor(dni)
-
-
-
-Las entidades  Película, Capítulos y Corto heredan de 
-la super clase Contenido Audiovisual todos los atributos.
-
-Película: (disponible_hasta) 
-C.P: id
-C.Aj: id_conteAudio → Contenido Audiovisual( id)
-V.N.N: disponible_hasta
-
-
-Capítulo: (disponible_desde,titulo_Serie,temporada)
-C.P: id
-C.Aj: id_conteAudio → Contenido Audiovisual( id) y
- titulo_Serie → Serie ( título)
-V.N.N: temporada, titulo_Serie y disponible_desde
-
-
-Serie: ()
-C.P: id y  título
-C.Aj: id_conteAudio → Contenido Audiovisual( id)
-
-
-Corto: () 
-C.P: id
-C.Aj: id_conteAudio → Contenido Audiovisual( id)
+TABLA A�ADIDA
+Lista_emails:(email) 
+C.P:id_cliente
 
 
 
@@ -93,3 +22,5 @@ NADA HA SIDO MODIFICADO
 
 
 Tercera forma normal (3FN)
+
+NADA HA SIDO MODIFICADO
