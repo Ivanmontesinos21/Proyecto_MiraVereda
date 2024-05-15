@@ -1,7 +1,5 @@
 PASO A TABLAS DE MIRAVEREDA
 
-Los ? son flechas
-
 Lyenda:
 C.P? Clave primaria
 C.Aj ? Clave Ajena
@@ -13,8 +11,7 @@ Cliente: (nombre, apellidos, contraseña,
 domicilio, email, código_postal, fecha_nacimiento y id_conteAudiovi)
 C.P: id_cliente
 C.Aj:id_ conteAudiovi ? Contenido Visual(id)
-V.N.N:nombre,apellidos, contraseña, email, fecha_nacimiento y
-fecha_nacimiento
+V.N.N:nombre,apellidos, contraseña, email y fecha_nacimiento
 C.Alt: email
 
 Pertenece_Tarjeta:()
