@@ -1,3 +1,18 @@
+--drop table Tarifa;
+--drop table Actor;
+--drop table Contenido_AudioVisual;
+--drop table Actuacion_ContenAudiovi;
+--drop table Cliente;
+--drop table Alquila;
+--drop table Factura;
+--drop table Linia_Factura;
+--drop table Pelicula;
+--drop table Corto;
+--drop table Serie;
+--drop table Capitulo;
+--drop table Tarjeta;
+--drop table pertenece_tarjeta;
+
 
 
 Create table Tarifa(
@@ -28,7 +43,7 @@ nombre_director varchar2(30) not null,
 version_idioma varchar2(30)not null,
 id_Tarifa varchar2(30),
 changedTs timestamp,
-constraint id_tarifa_fk foreign key (id_Tarifa) references Tarifa(id_tarifa)
+constraint id_tarifa_fk foreign key (id_Tarifa) references Tarifa(id_tarifa)on delete cascade
 
 );
 
@@ -37,7 +52,7 @@ Create table Actuacion_ContenAudiovi(
 dni_actor varchar2(9),
 id_conteAudiovi integer,
 constraint dni_actor_fk foreign key(dni_actor) references Actor(dni),
-constraint id_conteAudiovi_fk foreign key(id_conteAudiovi) references Contenido_AudioVisual(id_ca),
+constraint id_conteAudiovi_fk foreign key(id_conteAudiovi) references Contenido_AudioVisual(id_ca) on delete cascade,
 primary key(dni_actor,id_conteAudiovi),
 changedTs timestamp
 );
@@ -60,8 +75,8 @@ changedTs timestamp
 Create table Alquila(
 id_conteAudiovi integer,
 id_cliente varchar2(30),
-constraint id_conteAudiovi_fk_alquila foreign key(id_conteAudiovi) references Contenido_AudioVisual(id_ca),
-constraint id_cliente_fk_alquila foreign key(id_cliente) references Cliente(id_cliente),
+constraint id_conteAudiovi_fk_alquila foreign key(id_conteAudiovi) references Contenido_AudioVisual(id_ca) on delete cascade,
+constraint id_cliente_fk_alquila foreign key(id_cliente) references Cliente(id_cliente) on delete cascade,
 primary key(id_cliente,id_conteAudiovi),
 cobrado varchar2(20) not null,
 facturado varchar2(20) not null,
@@ -76,18 +91,18 @@ importe_base integer not null,
 importe_con_iva integer not null,
 fecha date not null,
 id_cliente varchar2(30),
-constraint id_cliente_factura foreign key (id_cliente) references Cliente(id_cliente),
+constraint id_cliente_factura foreign key (id_cliente) references Cliente(id_cliente)on delete cascade,
 changedTs timestamp
 );
 
 create sequence linia_factura_sequencia;
 Create table Linia_Factura(
 numero_factura integer,
-id_contenidoAudioVisual int,
+id_contenidoAudioVisual integer,
 num_linea varchar2(30),
- constraint numero_factura_fk foreign key(numero_factura) references Factura(numero_factura),
+ constraint numero_factura_fk foreign key(numero_factura) references Factura(numero_factura)on delete cascade,
 primary key(numero_factura,num_linea),
-constraint id_contenidoAudioVisual_fk_linea_factura foreign key(id_contenidoAudioVisual) references Contenido_AudioVisual(id_ca),
+constraint id_contenidoAudioVisual_fk_linea_factura foreign key(id_contenidoAudioVisual) references Contenido_AudioVisual(id_ca)on delete cascade,
 changedTs timestamp
 );
 
@@ -104,8 +119,8 @@ valoracion_media number(2,1),
 nombre_director varchar2(30),
 version_idioma varchar2(30),
 id_tarifa varchar(30),
-constraint id_tarifa_fk_pelicula foreign key (id_tarifa) references Tarifa(id_tarifa),
-constraint id_contenidoAudiovisual_fk_pelicula foreign key(id_contenidoAudiovisual) references Contenido_AudioVisual(id_ca),
+constraint id_tarifa_fk_pelicula foreign key (id_tarifa) references Tarifa(id_tarifa)on delete cascade,
+constraint id_contenidoAudiovisual_fk_pelicula foreign key(id_contenidoAudiovisual) references Contenido_AudioVisual(id_ca)on delete cascade,
 primary key(id_contenidoAudiovisual),
 changedTs timestamp
 );
@@ -122,8 +137,8 @@ valoracion_media number(2,1),
 nombre_director varchar2(30),
 version_idioma varchar2(30),
 id_tarifa varchar2(30),
- constraint id_tarifa_fk_corto foreign key (id_tarifa) references Tarifa(id_tarifa),
-constraint id_contenidoAudiovisual_fk_corto foreign key(id_contenidoAudiovisual) references Contenido_AudioVisual(id_ca),
+ constraint id_tarifa_fk_corto foreign key (id_tarifa) references Tarifa(id_tarifa)on delete cascade,
+constraint id_contenidoAudiovisual_fk_corto foreign key(id_contenidoAudiovisual) references Contenido_AudioVisual(id_ca)on delete cascade,
 primary key(id_contenidoAudiovisual),
 changedTs timestamp
 );
@@ -133,7 +148,7 @@ Create table Serie(
 id_contenidoAudiovisual integer,
 titulo varchar2(30) not null,
 codigo integer ,
- constraint id_contenidoAudiovisual_fk_serie foreign key(id_contenidoAudiovisual) references Contenido_AudioVisual(id_ca),
+ constraint id_contenidoAudiovisual_fk_serie foreign key(id_contenidoAudiovisual) references Contenido_AudioVisual(id_ca)on delete cascade,
 primary key(codigo),
 changedTs timestamp
 );
@@ -153,8 +168,8 @@ valoracion_media number(2,1),
 nombre_director varchar2(30),
 version_idioma varchar2(30),
 id_tarifa varchar2(30),
- constraint id_tarifa_fk_capitulo foreign key (id_tarifa) references Tarifa(id_tarifa),
-constraint id_contenidoAudiovisual_fk_capitulo foreign key(id_contenidoAudiovisual) references Contenido_AudioVisual(id_ca),
+ constraint id_tarifa_fk_capitulo foreign key (id_tarifa) references Tarifa(id_tarifa) on delete cascade,
+constraint id_contenidoAudiovisual_fk_capitulo foreign key(id_contenidoAudiovisual) references Contenido_AudioVisual(id_ca)on delete cascade,
 constraint codigo_serie_fk foreign key(codigo_Serie) references Serie(codigo),
 primary key(id_contenidoAudiovisual),
 changedTs timestamp
@@ -167,15 +182,15 @@ fecha_caducidad date not null,
 CVV varchar2(3) not null,
 titular varchar2(20) not null,
 id_cliente varchar2(30) not null,
-constraint id_cliente_fk_tarjeta foreign key (id_cliente) references Cliente(id_cliente),
+constraint id_cliente_fk_tarjeta foreign key (id_cliente) references Cliente(id_cliente)on delete cascade,
 changedTs timestamp
 );
 
 create table pertenece_tarjeta(
 id_cliente varchar2(30),
 id_tarjeta varchar2(9),
-constraint id_cliente_fk_pertenece_tarjeta foreign key (id_cliente) references Cliente(id_cliente),
-constraint id_tarjeta_fk foreign key (id_tarjeta) references Tarjeta (id_tarjeta),
+constraint id_cliente_fk_pertenece_tarjeta foreign key (id_cliente) references Cliente(id_cliente)on delete cascade ,
+constraint id_tarjeta_fk foreign key (id_tarjeta) references Tarjeta (id_tarjeta)on delete cascade,
 primary key(id_cliente,id_tarjeta),
 changedTs timestamp
 );
