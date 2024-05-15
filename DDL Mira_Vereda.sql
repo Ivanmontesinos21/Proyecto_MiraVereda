@@ -42,11 +42,17 @@ nombre varchar(50),
 apellidos varchar(50),
 contraseña varchar(30),
 domicilio varchar(50),
-email varchar(30),
 codigo_postal varchar(7),
 fecha_nacimiento DATE,
 id_contenidoAudiovi int,
 foreign key (id_contenidoAudiovi) references Contenido_AudioVisual(id)
+);
+
+create table Lista_emails(
+lista_email varchar(30),
+idcliente varchar(30),
+foreign key(idcliente) references Cliente(id_cliente),
+primary key(idcliente)
 );
 
 Create table Alquila(
