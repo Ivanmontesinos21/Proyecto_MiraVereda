@@ -1,60 +1,61 @@
-PASO A TABLAS DE MIRAVEREDA
+ï»¿PASO A TABLAS DE MIRAVEREDA
 
 Lyenda:
-C.P? Clave primaria
-C.Aj ? Clave Ajena
-V.N.N ? Valor no nulo
-C.Alt ? Clave Alternativa
+C.Pâ†’ Clave primaria
+C.Aj â†’ Clave Ajena
+V.N.N â†’ Valor no nulo
+C.Alt â†’ Clave Alternativa
 
 
-Cliente: (nombre, apellidos, contraseña,
-domicilio, email, código_postal, fecha_nacimiento y id_conteAudiovi)
-C.P: id_clienteid
-C.Aj:id_ conteAudiovi ? Contenido Visual(id)
-V.N.N:nombre,apellidos, contraseña, email y fecha_nacimiento
+Cliente: (nombre, apellidos, contraseÃ±a,
+domicilio, email, cÃ³digo_postal, fecha_nacimiento y id_conteAudiovi)
+C.P: id_cliente
+C.Aj:id_ conteAudiovi â†’ Contenido Visual(id)
+V.N.N:nombre,apellidos, contraseÃ±a, email, fecha_nacimiento y
+fecha_nacimiento
 C.Alt: email
 
 Pertenece_Tarjeta:()
 C.P: id_Cliente y num_Tarjeta
-C.Aj: id_Cliente ? Cliente( id_cliente) y num_Tarjeta ? Tarjeta(num_tarjeta)
+C.Aj: id_Cliente â†’ Cliente( id_cliente) y num_Tarjeta â†’ Tarjeta(num_tarjeta)
 
 
 Tarjeta:(fecha_caducidad,CCV,id_Cliente,titular)
 C.P:num_tarjeta
-C.Aj:id_Cliente ? Cliente(id_cliente)
+C.Aj:id_Cliente â†’ Cliente(id_cliente)
 V.N.N: fecha_caducidad, CCV y titular
 
 
-Aclaración: valoración? Valoración de cada usuario
-Alquila:(cobrado,facturado,valoración)
+AclaraciÃ³n: valoraciÃ³nâ†’ ValoraciÃ³n de cada usuario
+Alquila:(cobrado,facturado,valoraciÃ³n)
 C.P: id_Cliente y id_ conteAudiovi
-C.Aj:id_Cliente ? Cliente(id_cliente) y id_conteAudiovi? id(Contenido
+C.Aj:id_Cliente â†’ Cliente(id_cliente) y id_conteAudioviâ†’ id(Contenido
 Visual)
 V.N.N: cobrado y facturado
 
 
 Factura: ( importe_base, importe_con_iva, fecha,id_Cliente) 
 C.P: numero_factura
-C.Aj: id_Cliente ? Cliente(id_cliente)
+C.Aj: id_Cliente â†’ Cliente(id_cliente)
 V.N.N: importe_base, importe_con_iva y fecha
 
 
-Aclaración: Al ser Débil de Identidad la clave ajena también forma parte de la clave primaria
-Línea de Factura: (num_Factura y id_conteAudiovi) 
+AclaraciÃ³n: Al ser DÃ©bil de Identidad la clave ajena tambiÃ©n forma parte de la clave primaria
+LÃ­nea de Factura: (num_Factura y id_conteAudiovi) 
 C.P:num_linea y num_Factura
-C.Aj:num_Factura ? Factura(numero_factura) y id_conteAudiovi? id(Contenido
+C.Aj:num_Factura â†’ Factura(numero_factura) y id_conteAudioviâ†’ id(Contenido
 Visual)
 
 
 
 
-Aclaración: valoración_media? Valoración de todos los usuarios
-Contenido Audiovisual: ( género, fecha_estreno,duración, titulo,
-precio , descripción, valoración_media, nombre_director,versión_idioma y
+AclaraciÃ³n: valoraciÃ³n_mediaâ†’ ValoraciÃ³n de todos los usuarios
+Contenido Audiovisual: ( gÃ©nero, fecha_estreno,duraciÃ³n, titulo,
+precio , descripciÃ³n, valoraciÃ³n_media, nombre_director,versiÃ³n_idioma y
 id_Tarifa )
 C.P: id
-C.Aj: id_Tarifa ? Tarifa(id) 
-V.N.N:género,titulo,duración,nombre_director,precio y versión_idioma
+C.Aj: id_Tarifa â†’ Tarifa(id) 
+V.N.N:gÃ©nero,titulo,duraciÃ³n,nombre_director,precio y versiÃ³n_idioma
 
 
 Tarifa:(incremento)
@@ -68,34 +69,34 @@ V.N.N:nombre y apellidos
 
 
 
-Actuación_ContenAudiovi:()
+ActuaciÃ³n_ContenAudiovi:()
 C.P: dni_actor  y  id_ conteAudiovi
-C.Aj: id_ conteAudiovi ? Contenido Audiovisual(id) y dni_actor ? Actor(dni)
+C.Aj: id_ conteAudiovi â†’ Contenido Audiovisual(id) y dni_actor â†’ Actor(dni)
 
 
-Las entidades  Película, Capítulos y Corto heredan de la super clase 
+Las entidades  PelÃ­cula, CapÃ­tulos y Corto heredan de la super clase 
 Contenido Audiovisual todos los atributos.
 
-Película: (disponible_hasta) 
+PelÃ­cula: (disponible_hasta) 
 C.P: id_ conteAudiovi
-C.Aj: id_ conteAudiovi ? Contenido Audiovisual( id)
+C.Aj: id_ conteAudiovi â†’ Contenido Audiovisual( id)
 V.N.N: disponible_hasta
 
 
-Capítulo: (disponible_desde,titulo_Serie,temporada)
+CapÃ­tulo: (disponible_desde,titulo_Serie,temporada)
 C.P: id_ conteAudiovi
-C.Aj: id_conteAudiovi ? Contenido Audiovisual( id) y
- titulo_Serie ? Serie ( título)
+C.Aj: id_conteAudiovi â†’ Contenido Audiovisual( id) y
+ titulo_Serie â†’ Serie ( tÃ­tulo)
 V.N.N: temporada, titulo_Serie y disponible_desde
 
 
-Serie: ()
-C.P: id_ conteAudiovi y  título
-C.Aj: id_ conteAudiovi ? Contenido Audiovisual( id)
+Serie: (tÃ­tulo)
+C.P: id_ conteAudiovi
+C.Aj: id_ conteAudiovi â†’ Contenido Audiovisual( id)
 
 
 Corto: () 
 C.P: id_ conteAudiovi
-C.Aj: id_ conteAudiovi ? Contenido Audiovisual( id)
+C.Aj: id_ conteAudiovi â†’ Contenido Audiovisual( id)
 
 
