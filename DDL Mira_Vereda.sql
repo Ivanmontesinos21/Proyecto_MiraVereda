@@ -115,16 +115,16 @@ primary key(id_contenidoAudiovisual)
 );
 
 Create table Serie(
-id_contenidoAudiovisual int auto_increment,
+id_contenidoAudiovisual int,
 titulo varchar(30) not null,
+codigo int auto_increment,
 foreign key(id_contenidoAudiovisual) references Contenido_AudioVisual(id),
-primary key(id_contenidoAudiovisual),
-unique key(titulo)
+primary key(codigo)
 );
 
 Create table Capitulo(
 disponible_desde date not null,
-titulo_Serie varchar(30)  not null,
+codigo_Serie int not null,
 temporada varchar(10) not null,
 id_contenidoAudiovisual int auto_increment,
 genero varchar(30),
@@ -139,7 +139,7 @@ version_idioma varchar(30),
 id_tarifa varchar(30),
 foreign key (id_tarifa) references Tarifa(id),
 foreign key(id_contenidoAudiovisual) references Contenido_AudioVisual(id),
-foreign key(titulo_Serie) references Serie(titulo),
+foreign key(codigo_Serie) references Serie(codigo),
 primary key(id_contenidoAudiovisual)
 );
 
