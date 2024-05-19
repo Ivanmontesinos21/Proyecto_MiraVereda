@@ -67,11 +67,11 @@
         "email": "string",
         "fechaNacimiento": "number", // Timestamp
         "domicilio": "string",
-        "codigoPostal": "number",
+        "codigoPostal": "string",
         "tarjetas": [
             {
                 "id": "number",
-                "num_tarjeta": "string",
+                "numTarjeta": "string",
                 "ccv": "string",
                 "fechaCaducidad": "number", // Timestamp
                 "titular": "string" // Nombre del titular
@@ -91,7 +91,7 @@
         "fechaNacimiento": "number", // Timestamp
         "contrasenya": "string",
         "domicilio": "string",
-        "codigoPostal": "number",
+        "codigoPostal": "string",
     }
     ```
 ## Endpoints POST
@@ -138,7 +138,7 @@
     {
         "email": "string",
         "contrasenya": "string",
-        "num_tarjeta": "string",
+        "numTarjeta": "string",
         "ccv": "string",
         "fechaCaducidad": "number", // Timestamp
         "titular": "string" // Nombre del titular
