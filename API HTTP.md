@@ -72,7 +72,7 @@
             {
                 "id": "number",
                 "numTarjeta": "string",
-                "ccv": "string",
+                "cvv": "string",
                 "fechaCaducidad": "number", // Timestamp
                 "titular": "string" // Nombre del titular
             },
@@ -139,7 +139,7 @@
         "email": "string",
         "contrasenya": "string",
         "numTarjeta": "string",
-        "ccv": "string",
+        "cvv": "string",
         "fechaCaducidad": "number", // Timestamp
         "titular": "string" // Nombre del titular
     }
