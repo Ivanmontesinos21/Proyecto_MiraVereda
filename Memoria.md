@@ -17,7 +17,7 @@
   - Jaime ha  hecho el login en html y ha estado revisando el servidor.
  
   - 17/05/2024
-  - Ivan hizo el pseudocodigo y el diagrama de flujo de inicio de sesion y tambien la tabla de decision.
+  - Ivan hizo el pseudocódigo y el diagrama de flujo de inicio de sesión y tambien la tabla de decisión.
   - Jaime ha estado  haciendo PL/SQL.
   - David ha hecho el crud de Clientes en html.
   - Ian ha estado haciendo el Crud de clientes en JS.
