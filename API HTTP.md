@@ -108,6 +108,15 @@
     `Lo mismo que GET /api/ususario/{id} devolvería con la id del usuario logueado`
   - Output en caso de error:
     `Mensaje de error`
+### Resetear contraseña
+- POST /api/resetpass
+  - Input:
+    ```js
+    {
+        "email": "string",
+        "contrasenya": "string"
+    }
+    ```
 ### Ver carrito
 - POST /api/carrito/todo
   - Input:
