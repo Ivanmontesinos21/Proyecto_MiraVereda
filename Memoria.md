@@ -11,10 +11,10 @@
   - Ian ha estado revisando el ddl porque habia que añadir algo al ddl hecho por David
   - Ivan ha modificado el ddl hecho por David y pasarlo a Oracle.
  - 16/05/2024
-  - Ivan estuvo acabando el apartado de preferencias en Android.
-  - David ha estado haciendo la segunda pantalla del apartado de android.
-  - Ian ha estado haciendo la funcion anyadir_carrito y el procedimiento procedimiento_login .
-  - Jaime ha  hecho el login en html y ha estado revisando el servidor.
+    - Ivan estuvo acabando el apartado de preferencias en Android.
+    - David ha estado haciendo la segunda pantalla del apartado de android.
+    - Ian ha estado haciendo la funcion anyadir_carrito y el procedimiento procedimiento_login .
+    - Jaime ha  hecho el login en html y ha estado revisando el servidor.
  
 - 17/05/2024
   - Ivan hizo el pseudocódigo y el diagrama de flujo de inicio de sesión y tambien la tabla de decisión.
