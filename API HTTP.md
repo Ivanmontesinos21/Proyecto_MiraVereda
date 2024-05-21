@@ -153,14 +153,13 @@
         "titular": "string" // Nombre del titular
     }
     ```
-### Votar una pelicula
-- POST /api/votar/
+### Votar una película
+- POST /api/pelicula/{id}/votar/
   - Input:
     ```js
     {
         "email": "string",
         "contrasenya": "string",
-        "idPelicula": "number",
         "votacion": "number" // Número entre 1 y 5
     }
     ```
@@ -181,6 +180,7 @@
         "email": "string",
         "contrasenya": "string"
     }
+    ```
 ## Endpoints DELETE
 ### Quitar del carrito
 - DELETE /api/carrito/
