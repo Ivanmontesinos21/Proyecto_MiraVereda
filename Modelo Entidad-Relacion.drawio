@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-21T14:07:07.047Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0" etag="5JEG3b2_7_M3CnOTg9iR" version="24.4.4" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-21T14:12:35.716Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0" etag="FVqxxIL1DERR7wSNeF66" version="24.4.4" type="device">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="2814" dy="1702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -58,7 +58,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MZahAP7ZjcBy5LVu-B12-8" value="&lt;div&gt;fecha_estreno&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="433" y="70" width="100" height="40" as="geometry" />
+          <mxGeometry x="440" y="65" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="xNMmBcrmGtZUjo-tdzeP-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="MZahAP7ZjcBy5LVu-B12-9" target="MZahAP7ZjcBy5LVu-B12-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -474,6 +474,12 @@
             <mxPoint x="-740" y="550" as="sourcePoint" />
             <mxPoint x="-688" y="533" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="VNYB-_wYlP5E3bTo7_7c-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="VNYB-_wYlP5E3bTo7_7c-1" target="MZahAP7ZjcBy5LVu-B12-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VNYB-_wYlP5E3bTo7_7c-1" value="imagen_url" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="383" y="20" width="100" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
