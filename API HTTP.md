@@ -173,6 +173,14 @@
         "contrasenya": "string"
     }
     ```
+### Ver película
+- POST /api/pelicula/{id}/ver/
+  - Input:
+    ```js
+    {
+        "email": "string",
+        "contrasenya": "string"
+    }
 ## Endpoints DELETE
 ### Quitar del carrito
 - DELETE /api/carrito/
