@@ -50,6 +50,7 @@ create table Contenido_AudioVisual (
 	nombre_director varchar2(30) not null,
 	version_idioma varchar2(8) not null,
 	id_Tarifa integer,
+	imagen_url varchar2(500),
 	changedTs timestamp,
 	constraint id_tarifa_fk foreign key (id_Tarifa) references Tarifa(id_tarifa) on delete cascade
 );
@@ -116,7 +117,7 @@ Create table Alquila (
 	id_conteAudiovi integer,
 	id_cliente integer,
 	cobrado number(1) not null,
-	facturado number(1) not null,
+	disponible_hasta date,
 	valoracion number(2,1),
 	changedTs timestamp,
 	constraint id_conteAudiovi_fk_alquila foreign key(id_conteAudiovi) references Contenido_AudioVisual(id_ca) on delete cascade,
