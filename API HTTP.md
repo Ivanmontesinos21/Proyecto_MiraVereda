@@ -109,7 +109,7 @@
   - Output en caso de error:
     `Mensaje de error`
 ### Resetear contraseña
-- POST /api/resetpass
+- PUT /api/resetpass
   - Input:
     ```js
     {
