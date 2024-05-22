@@ -118,7 +118,7 @@
     }
     ```
 ### Ver carrito
-- POST /api/carrito/todo
+- POST /api/carrito/ver/
   - Input:
     ```js
     {
