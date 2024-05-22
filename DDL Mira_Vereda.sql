@@ -120,6 +120,7 @@ Create table Alquila (
 	disponible_hasta date,
 	valoracion number(2,1),
 	changedTs timestamp,
+	en_carrito number(1),
 	constraint id_conteAudiovi_fk_alquila foreign key(id_conteAudiovi) references Contenido_AudioVisual(id_ca) on delete cascade,
 	constraint id_cliente_fk_alquila foreign key(id_cliente) references Cliente(id_cliente) on delete cascade,
 	primary key(id_cliente,id_conteAudiovi)
