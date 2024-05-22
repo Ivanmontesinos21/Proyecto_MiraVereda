@@ -162,3 +162,8 @@ create table Tarjeta (
 	changedTs timestamp,
 	constraint id_cliente_fk_tarjeta foreign key (id_cliente) references Cliente(id_cliente) on delete cascade
 );
+
+CREATE OR REPLACE PACKAGE CONSTANTES
+IS 
+   IVA CONSTANT NUMBER := 0.21;
+END;
