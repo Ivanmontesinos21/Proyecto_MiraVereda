@@ -31,7 +31,7 @@
   - David esta haciendo la conexion del servidor con Android studio.
   - Ivan esta haciendo los requisitos funcionales y no funcionales de la aplicación.
     
--  21/05/2024
+  - 21/05/2024
     -   Ian a finalizado el CRUD de clientes y esta haciendo el de Peliculas.
     -   Ivan ha modificado el pseudocódigo y ha añadido partes a los requisitos funcionales y no funcionales.
     -   David ha conectado el servidor para poder iniciar sesion en movil conectado al servidor.
