@@ -163,6 +163,90 @@ create table Tarjeta (
 	constraint id_cliente_fk_tarjeta foreign key (id_cliente) references Cliente(id_cliente) on delete cascade
 );
 
+CREATE OR REPLACE TRIGGER tarifa_changedts
+BEFORE UPDATE ON tarifa
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER actor_changedts
+BEFORE UPDATE ON actor
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER ca_changedts
+BEFORE UPDATE ON contenido_audiovisual
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER pelicula_changedts
+BEFORE UPDATE ON pelicula
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER serie_changedts
+BEFORE UPDATE ON serie
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER capitulo_changedts
+BEFORE UPDATE ON capitulo
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER corto_changedts
+BEFORE UPDATE ON corto
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER cliente_changedts
+BEFORE UPDATE ON cliente
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER alquila_changedts
+BEFORE UPDATE ON alquila
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER factura_changedts
+BEFORE UPDATE ON factura
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER linea_factura_changedts
+BEFORE UPDATE ON linea_factura
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
+CREATE OR REPLACE TRIGGER tarjeta_changedts
+BEFORE UPDATE ON tarjeta
+FOR EACH ROW
+BEGIN
+	:NEW.changedTs := SYSTIMESTAMP;
+END;
+
 CREATE OR REPLACE PACKAGE CONSTANTES
 IS 
    IVA CONSTANT NUMBER := 0.21;
