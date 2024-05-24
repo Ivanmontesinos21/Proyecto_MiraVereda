@@ -1,0 +1,325 @@
+:root {
+	--text: #f5eaec;
+	--background: #221113;
+	--primary: #5e212a;
+	--secondary: #2f181a;
+	--accent: #e6112d;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	height: 100vh;
+	background-color: var(--background);
+	color: var(--text);
+	font-family: arial, sans-serif;
+}
+
+a {
+	color: var(--accent);
+}
+
+body > header {
+	z-index: 10;
+}
+
+/* By default, h1s within articles, sectioins and asides have a smaller font size than h1s usually have. The purpose of the following rule is to prevent that. */
+article h1, section h1, aside h1 {
+	font-size: 32px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+	box-sizing: border-box;
+	margin-bottom: 22px;
+	padding: 10px;
+	font-size: 15px;
+	color: var(--text);
+	background-color: var(--background);
+	border: solid 3px var(--primary);
+	border-radius: 10px;
+	outline: none;
+	box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4);
+	transition: background-color 200ms;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+	background-color: var(--secondary);
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="url"],
+form input[type="number"],
+form input[type="date"],
+form textarea,
+form select {
+	width: 100%;
+}
+
+select {
+	background-color: var(--primary);
+}
+
+.text-like-link {
+	color: var(--color);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.scrollable {
+	overflow-y: auto;
+}
+
+.floating-panel {
+	background-color: var(--primary);
+	border-radius: 10px;
+	box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4);
+	padding: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.invisible-button {
+	padding: 0;
+	margin: 0;
+	background-color: unset;
+	border: none;
+	cursor: pointer;
+}
+
+.icon-30px {
+	height: 30px;
+}
+
+.icon-40px {
+	height: 40px;
+}
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 100ms;
+}
+
+.dropdown:hover > .dropdown-menu {
+	display: block;
+}
+
+.dropdown:focus-within > .dropdown-menu {
+	display: block;
+	opacity: 1;
+	pointer-events: all;
+}
+
+.button {
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: var(--primary);
+	border-radius: 10px;
+	font-size: 16px;
+	color: var(--text);
+	cursor: pointer;
+	border: solid 2px var(--primary);
+	font-family: arial, sans-serif;
+	transition: transform 100ms, border-color 100ms;
+}
+
+.button:hover {
+	border: solid 2px var(--text);
+}
+
+.button:active {
+	transform: scale(0.95);
+}
+
+.accent {
+	background-color: var(--accent);
+	border: solid 2px var(--accent);
+	color: #eedddf;
+}
+
+.fill-horizontal {
+	width: 100%;
+}
+
+.thin-page {
+	width: 500px;
+	max-width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-sizing: border-box;
+	align-content: center;
+}
+
+.thin-page-500px {
+	width: 500px;
+	max-width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-sizing: border-box;
+	align-content: center;
+}
+
+.thin-page-600px {
+	width: 600px;
+	max-width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-sizing: border-box;
+	align-content: center;
+}
+
+.textbox-label {
+	display: block;
+	margin-bottom: 2px;
+	margin-left: 5px;
+}
+
+.skip-to-main-content {
+	z-index: 11;
+	position: absolute;
+	top: 10px;
+	left: -9999px;
+	opacity: 0;
+}
+
+.skip-to-main-content:focus {
+	left: 10px;
+	opacity: 1;
+}
+
+.top-bar {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px;
+	padding-right: 16px;
+	background-color: var(--background);
+	box-shadow: 0 16px 16px 0 var(--background);
+}
+
+.top-bar *:nth-child(4) {
+	margin-inline-start: auto;
+}
+
+.top-bar .site-logo-and-name {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--text);
+	text-decoration: none;
+}
+
+.top-bar .site-logo {
+	height: 60px;
+}
+
+.top-bar .site-name {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.top-bar .nav-links {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	gap: 14px;
+}
+
+.dropdown.nav-dropdown > .dropdown-menu {
+	top: 75px;
+}
+
+@media (min-width: 721px) {
+	.top-bar .hamburger {
+		display: none;
+	}
+	
+	.nav-dropdown:focus-within .nav-menu {
+		display: none;
+	}
+}
+
+@media (max-width: 720px) {
+	.top-bar .nav-links {
+		display: none;
+	}
+}
+
+.main-content {
+	padding: 10px;
+	padding-top: 26px;
+	padding-bottom: 120px;
+	background-color: var(--background);
+}
+
+footer {
+	padding: 20px;
+	text-align: right;
+}
+
+.dropdown.lang > .dropdown-menu {
+	right: 5px;
+	width: 42px;
+}
+
+.dropdown.accounts > .dropdown-menu {
+	right: 5px;
+}
+
+.card-panel {
+	background-color: var(--secondary);
+	border: solid 3px var(--primary);
+	border-radius: 10px;
+	box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4);
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.card-panel > p, .card-panel > h3 {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.card-panel > .button {
+	margin-top: 10px;
+	margin-right: 6px;
+}
+
+@media only screen and (min-width: 1200px) {
+	.thin-page {
+		width: 900px;
+	}
+
+	.lista {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 12px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+	.thin-page {
+		width: 700px;
+	}
+}
