@@ -43,7 +43,7 @@
     -   David ha conectado el servidor para poder iniciar sesion en movil conectado al servidor.
     -   Jaime ha arreglado errores en pl_sql y ha añadido mas endpoint
 
-   -  23/05/2024
+  -  23/05/2024
     -   Ian a comentado el código.
     -   Ivan ha comentado con JavaDoc.
     -   David ha comentado con JavaDoc.
